@@ -1,0 +1,127 @@
+.otp-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.otp-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    width: 95%;
+    max-width: 650px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.otp-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.notice {
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #fff;
+}
+
+.notice-success {
+    border-left-color: #46b450;
+    background: #ecf7ed;
+}
+
+.notice-error {
+    border-left-color: #dc3232;
+    background: #fbeaea;
+}
+
+/* OTP Email Styles */
+.otp-code {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+}
+
+/* WooCommerce Email Customizer Compatibility */
+.woocommerce-email-content .otp-code {
+    margin: 20px auto;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .otp-code {
+        font-size: 20px;
+        width: 180px;
+    }
+}
+
+/* Honeypot field styles - Enhanced security */
+input[name="website"],
+input[name="phone"],
+input[name="address"],
+input[name="company"],
+input[name="comment"],
+input[name="subject"],
+input[name="message"],
+input[name="name"],
+input[name="title"],
+input[name="description"],
+input[name="website_verify"],
+input[name="phone_verify"],
+input[name="address_verify"],
+input[name="company_verify"],
+input[name="comment_verify"],
+input[name="subject_verify"],
+input[name="message_verify"],
+input[name="name_verify"],
+input[name="title_verify"],
+input[name="description_verify"] {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    z-index: -1 !important;
+    display: none !important;
+    visibility: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+} 
